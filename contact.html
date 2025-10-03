@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>here we go</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+
+    <style>
+      body{
+        
+      }
+
+      label{
+        font-weight: bold;
+      }
+
+      fieldset{
+        align-items: center;
+        text-align: center;
+        width: 900px;
+      }
+
+    </style>
+
+</head>
+<body>
+    
+<form id="contactForm">
+
+  <fieldset>
+  <legend style="font-weight: bold;">Contact Form</legend>
+
+  <p><i><b>Please fill your credentials..</b></i></p>
+  <label for="name">Name</label>
+  <input type="text" id="name" placeholder="Your Name" required>
+  
+
+  <label for="email">Email Address</label><br>
+  <input type="email" id="email" placeholder="Your Email" required>
+  <br>
+
+  <label for="message">Message</label><br>
+  <textarea id="message" placeholder="Your Message"></textarea>
+  <br>
+
+  <button type="submit">Send</button>
+
+  </fieldset>
+</form>
+<p id="feedback"></p>
+
+<script src="script.js">
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let feedback = document.getElementById("feedback");
+
+  if (name === "" || email === "") {
+    feedback.textContent = "Please fill in all required fields.";
+    feedback.style.color = "red";
+  } else {
+    feedback.textContent = "Thank you for contacting us!";
+    feedback.style.color = "green";
+  }
+});
+</script>
+</body>
+</html>
