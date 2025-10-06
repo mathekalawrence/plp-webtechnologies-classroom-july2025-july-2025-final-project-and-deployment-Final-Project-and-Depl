@@ -7,7 +7,7 @@
     <title>here we go</title>
     <link rel="stylesheet" href="styles.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css"> -->
 
     <style>
       body{
@@ -22,7 +22,20 @@
         align-items: center;
         text-align: center;
         width: 900px;
+        background-image: url('https://i.pinimg.com/736x/f0/d4/ab/f0d4ab613a82db394c4ac2d26cbb9a0f.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
       }
+
+      #message {
+        height: 90px;
+      }
+
+      .h {
+        font-size: 27px;
+        text-shadow: 5px;
+      }
+
 
     </style>
 
@@ -32,12 +45,12 @@
 <form id="contactForm">
 
   <fieldset>
-  <legend style="font-weight: bold;">Contact Form</legend>
+  <legend style="font-weight: bold;" class="h" >Contact Form</legend>
 
   <p><i><b>Please fill your credentials..</b></i></p>
-  <label for="name">Name</label>
+  <label for="name">Name</label><br>
   <input type="text" id="name" placeholder="Your Name" required>
-  
+  <br>
 
   <label for="email">Email Address</label><br>
   <input type="email" id="email" placeholder="Your Email" required>
@@ -47,7 +60,8 @@
   <textarea id="message" placeholder="Your Message"></textarea>
   <br>
 
-  <button type="submit">Send</button>
+  <button type="submit">Send</button> <br>
+  Or else get <a href="index.html">Back</a>
 
   </fieldset>
 </form>
